@@ -1,0 +1,1180 @@
+Empire State Building:facility
+ESB:facility
+AHFA:other
+Sage Award:other
+Pxleyes:company
+4Dbling:person
+VMA:tvshow
+london fashion week:other
+facebook:company
+Park(ing ) Day:other
+eurovision:tvshow
+MetroPCS:company
+Pisces:other
+ravens:sportsteam
+ray rice:person
+Scooter Braun:person
+snoop:person
+Wisconsin:geo-loc
+Deborah L:person
+Patricia M:person
+Ustream:company
+Winter 's Bone:movie
+joe:person
+God:person
+sam:person
+steve:person
+tanya:person
+S.F.:geo-loc
+Yom Kippur:other
+#BattlestarGalactica:tvshow
+#StarWars #TheCloneWars:tvshow
+alderwood:geo-loc
+cody:person
+ipod:product
+spencer:person
+iCarly:tvshow
+Crazy Steve:person
+Carly:person
+Megan:person
+Josh:person
+Anna Wintor:person
+iPhones:product
+ACF Friday Large Group:other
+PITT University:facility
+Cathedral of Learning G24:facility
+Hawaii:geo-loc
+aintree:geo-loc
+Wingo:person
+Time Warner Cable:company
+Epix Movie Channel:other
+Netflix:company
+JFK:person
+Soulja Boy:person
+DC:geo-loc
+Twitter:company
+Lindsay Lohan:person
+Adam:person
+TMZ:company,tvshow
+VISIONS LOUNGE:facility
+Pretty Little Liars:tvshow
+UK:geo-loc
+mike:person
+Gainesville:geo-loc
+Costa Lounge:facility
+salsa caliente:person
+Berkeley:geo-loc
+Three Days Grace:musicartist
+#Padres:sportsteam
+xmas:other
+Robert:person
+Chicago:geo-loc
+imdb:other
+Natives:musicartist
+Primus:musicartist
+Mystery Jets:musicartist
+iPad:product
+japan:geo-loc
+national flat picking championship:other
+Body Heat:other
+Hustler Hollywood:facility
+Toy story 3:movie
+Mark 14:30:other
+6th Biannual 24 Hour Prayer Focus:other
+Doha:geo-loc
+Blair:person
+Pope:person
+Brown:person
+Pepsi:company
+Coke:product
+justthen:person
+kenny:person
+Doc Lewis:person
+the tall ship Silva:facility
+Playboy:company
+Slovenia:geo-loc
+Sex In The City:movie
+30+ Beautiful Ladies:other
+North York:geo-loc
+Toronto:geo-loc
+Ontario:geo-loc
+CANADA:geo-loc
+Belfast:geo-loc
+Botanic Gdns:facility
+twitter:company
+VMAs:other
+Charles:person
+Florida:geo-loc
+Oscar:person
+1st Presbyterian:other
+Jan Brewer:person
+Hughie O'Donoghue:person
+the Fitzwilliam:facility
+Greek Festival:other
+St Johns:facility,geo-loc
+ASPEN:geo-loc
+the Rza:musicartist
+Whitney:person
+St John 's wort:other
+Katie:person
+richmond:geo-loc
+Nadal:person
+Novak:person
+Thanksgiving:other
+Secrets:facility
+Twins:sportsteam
+Vikings:sportsteam
+Friday Night Lights:tvshow
+Jesus Christ:person
+Samuel Savoirfaire Williams:person
+Potbelly Lincoln Park:facility
+IL:geo-loc
+Beyonce:person
+VEVO:company
+Pedersen:person
+Hangeland:other
+Fulham:geo-loc
+Michael:person
+Lohan:person
+Rashad:person
+Cudi:person
+Wale:person
+Sports Day:other
+Canada:geo-loc
+gatt holly:person
+phil collins:person
+lush:company
+HTC Desire Z:product
+The Room:movie
+Tommy WIseau:person
+Jessum:person
+Lady Gaga:person
+Grand Masquerade:other
+YouTube:company
+Jersey Shore:tvshow
+The Replacement:product
+port city java:company
+BAR:facility
+Clark Duke:person
+National POW/MIA Recognition Day:other
+Visa:company
+Joaquin Phoenix:person
+Andy Kaufman:person
+JENNIFERS BODY:movie
+-Roald Dahl:person
+England:geo-loc
+Nostalgia:product
+Cheryl:person
+Dermot:person
+Matt:person
+Constitution Day:other
+South 107:company
+John Acuff:person
+Dave:person
+JA:person
+Lindsay:person
+Morgan Le Fays:facility
+US:geo-loc
+V-I-K-I-N-G-S:sportsteam
+Cowboy Mouth:musicartist
+Holyroodhouse:facility
+DoE:other
+walmart:company
+maryland:geo-loc
+Jorge:person
+The Devils Art:other
+Words and Wine:other
+SF:geo-loc
+San Mateo:geo-loc
+youtube:company
+GA:geo-loc
+Halo:product
+bugatti V:product
+Maunalua:musicartist
+corbin:geo-loc
+Willow Smith:person
+Benjamin Button:person
+Sarah Jessica Parker:person
+Gwen Stefani:person
+New York Fashion Week:other
+New York:geo-loc
+The Bay:geo-loc
+Clemson:geo-loc
+Auburn:geo-loc
+Abby:person
+nini:person
+The Persuaders:tvshow
+Crooked:musicartist
+Business Alliance:company
+Seahawk:sportsteam
+Ohio:geo-loc
+Frank Solich:person
+Ohio State:sportsteam
+Mai Tai:facility
+Long Beach:geo-loc
+Radio 1:other
+Willingham:geo-loc
+Harrison:geo-loc
+Cooper:person
+auburn:geo-loc
+KISS:musicartist
+MADI:person
+Elements:facility
+Bush:person
+Kent:geo-loc
+pete:person
+AstronomersWithoutBorders:other
+NYC:geo-loc
+Central Park:geo-loc
+Brazil:geo-loc
+Knight and Day:movie
+Good Day Sunshine:facility
+Rodanthe:geo-loc
+Eminem:person
+Chelsea Handler:person
+Don Mattingly:person
+Joe Torre:person
+LA Dodgers:sportsteam
+Vegas:geo-loc
+Awakening Festival:other
+Ayodhya:person
+Brian:person
+Chicago Blackhawks:sportsteam
+Stan Bowman:person
+Cristobal Huet:person
+Jup Force PvP:other
+Kristen:person
+LA:geo-loc
+AMerican:company
+Pakistan:geo-loc
+LONDON:geo-loc
+Reuters:company
+Umar Gul:person
+boilers:sportsteam
+Mark Rowan:person
+Novel Wines:company
+tumblr:company
+skype:company
+Christmas:other
+Nijverdal:geo-loc
+The Lodge:facility
+JUTHTIN BEAVERRRR:person
+CamelBak BPA-Free Better Bottle with Bite Valve:product
+Camelbak:company
+DADT:other
+the BLAST:facility
+It 's Gucci Time:other
+SUPAHFEST:other
+Facebook:company
+BranchOut:product
+Accel:company
+London:geo-loc
+NEW ORLEANS:geo-loc
+Republic:facility
+GuitarNews:other
+RockHouse:other
+CAFE NINE:facility
+Information Underground:other
+dabigatran:product
+FDA:other
+M&amp;M:product
+Good Friday:other
+Tim Bulmer:person
+China:geo-loc
+estonia:geo-loc
+Alex:person
+Alejandro:other
+Leo:person
+Lions:sportsteam
+Glover Park:facility
+California:geo-loc
+Forex:company
+Nina:person
+Mandy:person
+Miley:person
+Miley and Mandy show:tvshow
+John:person
+Edward:person
+Alexei:person
+Philadelphia Eagles:sportsteam
+Donovan McNabb:person
+Reivers:sportsteam
+Pinky:person
+Primal:facility
+Giddings:geo-loc
+Elgin:geo-loc
+Wildcat Stadium:facility
+The Buffs:sportsteam
+LCL:company
+EuroVPS:company
+mcfly:person
+delaware:geo-loc
+VMB awards:other
+HSBC center:facility
+rocky horror show:movie
+Herbie:person
+Freddie:person
+Chapel Hill:geo-loc
+Small Biz Tech Tour 2010:other
+N.J.:geo-loc
+PAMPERS:company
+Margaret Hamburg:person
+Eyeopener:sportsteam
+Ryerson Quidditch team:sportsteam
+#Vh1:company,other
+-Larry Bird:person
+SD2:product
+belles mansion:facility
+Kahlua:product
+Justin Bieber:person
+Fayette County:geo-loc
+Dayton NJ:geo-loc
+Ball Metal Container:company
+Stephen:person
+DJ Got Us Fallin in Love:other
+RACHELLE:person
+Princess Lover OVA 1:movie
+Pope Benedict:person
+John Henry Newman:person
+Pope Benedict XVI:person
+Jim Rohn:person
+pope:person
+birmingham:geo-loc
+Steve King:person
+Lingerie football league:other
+iBGP:other
+eBGP:other
+Cisco:company
+Juniper:company
+America:geo-loc
+Marie Clair:company
+nightmare before christmas:movie
+USM:facility,other
+frat house Hattiesburg:facility
+Merlot:product
+Temecula:geo-loc
+Jan Bloom:person
+Trisha:person
+Paris:geo-loc
+The Town:movie
+Ben:person
+Gigli:movie
+Nokia 5800:product
+The Inbetweeners:tvshow
+JV soccer:sportsteam
+Benitez:person
+taylor:person
+TAYLOR:person
+Pedigree:company
+green tea:product
+LADY GAGA:person
+sharks:sportsteam
+Rocks:sportsteam
+Marcus Bentley:person
+#BB11:tvshow
+FedEx:company
+SCOTT WEILAND:person
+Music News Net:other
+Simon &amp; Schuster:other
+The Maccabees:musicartist
+Eastern Bloc:geo-loc
+Flikken:tvshow
+miami heat:sportsteam
+JANNUS LIVE:facility
+SUENALO:musicartist
+MIAMI:geo-loc
+SHAKEMODE:musicartist
+INDIGENOUS:musicartist
+The DeAndre Way:other
+TD Jakes Day:other
+Student Centre:facility
+Centennial College:other
+Progress Campus:geo-loc
+Scarborough:geo-loc
+Yoav:person
+We All Are Dancing:other
+Copenhagen:geo-loc
+30stm:musicartist
+kings and queens:musicartist
+george:person
+carmen:person
+The Echo:facility
+Gardens:facility
+HCA 8K:other
+paris hilton:person
+Anja Rubik:person
+Rousseff:person
+Erenice War:other
+Civil House:other
+Badass Babes Savin ' The Day:other
+Ghostland Observatory:musicartist
+Crocs:company
+John Lennon:person
+John Chiles:person
+Mike Davis:person
+Texas:geo-loc
+Arizona:geo-loc
+Cebu:geo-loc
+Dazed &amp; Confused:movie
+Edmonton:geo-loc
+Special Olympics:other
+Tim Yip:person
+Edmonton Journal:other
+Vanquish:product
+PS3:product
+Xbox 360:product
+Widro:company
+Mr . Van:person
+Michael Vick:person
+Eagles:sportsteam
+Colin:person
+Knighttime Billiards:facility
+Bonita:person
+DOUCHEBAG LOS ANGELES OPENING WEEKEND EXTRAVAGANZA:other
+Mr Ehrlich:person
+Game Informer:company
+florence:person
+Keeva:person
+Conan:tvshow
+Evergreen Subaru:company
+LiLo:person
+Renee:person
+Ducks:sportsteam
+LW Beleskey:person
+San Jose Mercury News:other
+it 's always sunny:tvshow
+SKY news:other
+mothers day:other
+Mothers Day:other
+GaGa:person
+SB1070:product,other
+Burnaby:geo-loc
+Brandy:person
+club penguin:product
+The Drama Edition:other
+iPhone:product
+iPhone4:product
+justin:person
+Stanford:other
+Robert Laughlin:person
+nintendo:company
+The Wolves:sportsteam
+the Lions:sportsteam
+Viera:geo-loc
+orlando:geo-loc
+David:person
+Brando:company
+The Heartbeat:facility
+Agora:movie
+Alex Amenabar:person
+Mar Adentro:movie
+The Sea Inside:movie
+W/Rachel Weisz:person
+Santa:person
+sega genesis:product
+KRISTEN BELL:person
+gucci:company
+chipotle:product
+Jackie:person
+APO:other
+North Phoenix ATA:facility
+Exodus Porter:product
+Dan:person
+General Hospital:tvshow
+Conn:person
+Atlanta:geo-loc
+Georgia:geo-loc
+George N . Parks:person
+UMass:other
+Hyper V:other
+server 2008:product
+server 2008 R2:product
+Liam:person
+Lari:person
+Futoosh:facility
+Teenage Dream:other
+Detroit:geo-loc
+Sacramento:geo-loc
+CA:geo-loc
+Subway:company
+Milford Rd:other
+Lindis Pass:geo-loc
+Arthurs Pass:geo-loc
+Desert Rd:other
+Lewis:geo-loc
+Rimutakas:geo-loc
+U.S. Capitol building:facility
+Glee:tvshow
+Charice:person
+*Gwen Stefani:person
+Vanilla vodka:product
+Steve:person
+M . Night:person
+Yanks:sportsteam
+Happy Valley:geo-loc
+Alpha &amp; Omega:movie
+Optimise:company
+Chris:person
+Rainy Days:other
+Packer:sportsteam
+Cachupas:product
+Water:other
+Testing Tomorrow:musicartist
+Cleveland Browns:sportsteam
+Delhomme:geo-loc
+Justin:person
+Ecclesiastes 7:14:other
+First Day of Autumn Networking Mixer:other
+Dick 's Carpet:facility
+Crown College:sportsteam
+Orange &amp; Blue Skate:other
+UI:other
+BORDER LINEA:musicartist
+Limelight:facility
+St . Mary's.:geo-loc
+al-Mallohi:person
+Denise Calaman:person
+Band hall:facility
+Donnie Hathaway:person
+Unsung:other
+St . Luke 's:other
+Shane:person
+Jonah:person
+Claire:person
+Lelystad:geo-loc
+AUS:geo-loc
+RR:geo-loc
+Robinhoods bay:geo-loc
+Jasmin:geo-loc
+Jeff:person
+New Jersey:geo-loc
+*Boston*:geo-loc
+Charlie Chaplin:person
+Younger Brother:musicartist
+Shpongle:musicartist
+Simon Posford:musicartist
+myspace:company
+Dortmunder Gold:product
+Newcastle Jets Youth:sportsteam
+AIS U21:sportsteam
+Criminal Minds:tvshow
+Tipitina:facility
+Marvin Gaye:person
+True Blood:tvshow
+bieber:person
+Cyber-Ark:company
+Wake:person
+Davidson:sportsteam,person
+Charlotte:person
+NC St:other
+Tyler Lewis:person
+UNC:other
+MRB @ 61 Roadhouse BBQ:other
+KSC:geo-loc
+George Hitchcock:person
+Kayak Magazine:person
+George Parks Hitchcock:person
+new Teaze cafe:facility
+Kirsten:person
+Dicks:facility
+Larry Bird:person
+Joel Ward:person
+Tim:person
+With You:other
+Delirious:musicartist
+Lord Jesus:person
+Battle of Britain:other
+Serious Eats:company
+meatloaf:person
+Southgate House:facility
+trey:person
+trey songz:person
+Mackenna:person
+Lois:person
+flipboard:company
+London Irish:sportsteam
+Gabriel Resources:company
+Romania:geo-loc
+High House Farm:company
+tom:person
+Kyle:person
+JL:person
+Teddy P:person
+Leroy Jenkins Day:other
+J John:person
+COLLEGE REPUBLICAN TAILGATE:other
+Levin:person
+Hien:person
+Fabi:person
+Murkowski:person
+AK:geo-loc
+Betsey Johnson:person
+Korean War:other
+mariaelena:person
+sarah:person
+brittany:person
+WB WILDCATS:sportsteam
+Private Practice:tvshow
+Dee:person
+kings of leon:musicartist
+Amazon U.K.:company
+alabama:geo-loc
+uk:geo-loc
+Christchurch:geo-loc
+Ultimate Magic:other
+The Standard:facility
+Shreveport:geo-loc
+Lake Charles:geo-loc
+LIVESTRONG Day:other
+Amber Le Bon:person
+Giles Deacon:person
+Fall Out Boy:musicartist
+Michael Kraus:person
+HOLLYWOOD:geo-loc
+Israel:geo-loc
+london:geo-loc
+#Astros:sportsteam
+Keppinger:person
+Downs:person
+CJ:person
+Yahoo:company
+Jacquelin:person
+Bono Mack:person
+Barbara Boxer:person
+Halo Reach:product
+mcdonalds:company
+rose:person
+Phil:geo-loc
+Society of Mining and Metallurgy Engineers:other
+Nick Jonas:person
+Family Guy:tvshow
+Eduardo Surita:person
+Columbus:geo-loc
+Pumpkin Moonshine:product
+Nashville:geo-loc
+KY:geo-loc
+K-On:tvshow
+ASU Step Gallery:facility
+MAC:company
+Kid Cudi:person
+Mariel Concepcion:person
+NY:geo-loc
+Manchester:geo-loc
+Barbados:geo-loc
+ufc:company
+vancouver:geo-loc
+Engadget:company
+Sky 3D:company
+Stephen Fry:person
+VT:geo-loc
+Champlain campus:facility
+Hyde Park Corner:facility
+iTunes:company,product
+Rick Ross:person
+Drake:person
+PLANO BALLOON FESTIVAL 2010:other
+The 31st annual Plano Balloon Festival:other
+Plano Balloon Festival:other
+Oh Canada Team:other
+World War 3:other
+Copa Sudamericana:other
+ngmoco:company
+iOS:product
+June Fest 2010:other
+Forgotten Door:facility
+Brady:person
+Tony Blair:person
+London Fashion Week:other
+UNKLE:musicartist
+Rotary Club:facility
+Terry Fox:person
+Coach Germano:person
+Albin:person
+Haines:person
+Burrow:person
+Madden:product
+Steve Dave:person
+Steve &quot; Stylez &quot;:person
+Desperado:person
+sfitzy93:person
+Jenny:person
+Rob:person
+Middle East:geo-loc
+Yanni:person
+verizon:company
+Lilia:person
+Lucid Dementia:musicartist
+Austin:geo-loc
+The Scoot Inn:geo-loc
+AT&amp;T:company
+Greenville:geo-loc
+AL:geo-loc
+miami:geo-loc
+Buck mountain:geo-loc
+GLASGOW:geo-loc
+Naples:geo-loc
+N.E.R.D.:musicartist
+Maroon 5:musicartist
+MTV:company,other
+Stars:facility
+Vordingborg:geo-loc
+Ryerson Quidditch:sportsteam
+Rihanna:person
+Stetson:facility
+BBL:other
+EBL:other
+Euroleague:other
+NBA:other
+League Pass:tvshow
+bahamas:geo-loc
+Anya Kamenetz:person
+Swayzes Venue:facility
+Grammar Boot Camp:other
+Glenveagh national park:facility
+Fashion week:other
+Ralph Lauren:person
+Oscar de la Renta:person
+-Coco Chanel:person
+Lincoln park after dark:product
+Russian navy:product
+UFlex:company
+Mariano:person
+macdonalds:product
+Paco:person
+India:geo-loc
+Pi:geo-loc
+CWE:geo-loc
+Delmar:geo-loc
+Kirkwood:geo-loc
+Shange:person
+Roger Waters:person
+KLH:other
+Baka Boyz:musicartist
+DJ Elements:musicartist
+Dems:other
+GOP:other
+Sydney:geo-loc
+Danny:person
+Penny:person
+Mesa:geo-loc
+AZ:geo-loc
+MTS:company
+Above&amp;Beyond:other
+Trance Around The World 338 ( Wippenberg Guestmix ):other
+Yli:person
+Lebowski Fest:other
+Dave Matthews:person
+target:company
+New Life:facility
+Ellen:person
+Portia:person
+Easy A:movie
+Devil:movie
+america:geo-loc
+old navy:company
+git:product
+Joe:person
+Ft Mitchell:geo-loc
+Pizza Hut:company
+Army Run:other
+Todo Cabio:person
+Valentines Day:other
+inglewood:geo-loc
+mv:geo-loc
+Mike:person
+R'lyeh,:other
+Hoegaarden:product
+After Eventide:product
+Kindle:product
+Catherine Olson:person
+HoveLive Festival:other
+Belgium:geo-loc
+Cahill:geo-loc
+Land of Talk:other
+Minneapolis:geo-loc
+Morton 's Salt:product
+Murphy 's Law:other
+Liffey:geo-loc
+50 tyson:person
+Bradley Soccer:sportsteam
+Herbivore:facility
+A&amp;E:other
+TIFF:other
+Tdot:geo-loc
+EVA MENDES:person
+Sam:person
+Real:sportsteam
+Danger Days : The True Lives Of The Fabulous Killjoys:other
+camp rock 2:movie
+Dylan:person
+Disney:company
+Whole Hog Dinner:other
+Dior:product
+Zac Brown Band:musicartist
+Taorminaa:geo-loc
+Blackberry:company
+dynamite:other
+Fort Mason:facility
+twitpic:company
+Kerri russel:person
+White Eagle:facility
+Dancing Queen:other
+diggy:person
+Riley:person
+the Apollo:facility
+Zune HD:product
+D.C.:geo-loc
+Mumpreneur Awards:other
+Daily Mail:company
+Chevron:company
+chelsea:person
+Jupiter:geo-loc
+bc:geo-loc
+Ione:company
+ellwood:person
+strokes of genius:other
+john wertheim:person
+barksdale:facility
+Ed Miliband:person
+WoW:product
+prince:person
+paul simon:person
+o.d.b.:person
+iPod:product
+goodbye moon:other
+Air Music Jump:product
+Rock Band:product
+Guitar Hero:product
+Music Jump:product
+Mike Vick:person
+Conflicts of Law : Cases and Materials:product
+Lea Brilmayer:person
+Jack L:person
+YOM KIPPUR:other
+Eli:person
+Swagger/Kofi Match:other
+Vuelter blog:other
+The Pub:facility
+Jones:person
+DJ Chris L:musicartist
+fb:company
+#Denver:geo-loc
+Breaking &amp; Entering:musicartist
+Hi Pac:facility
+Enslaved : Odyssey to the West:product
+PlayStation Network:product
+Bowl Long Island:facility
+Patchogue):geo-loc
+Oakland:geo-loc
+Tessa:person
+Seanzie:person
+Jarred Gidley:person
+The Heatwave:facility
+Brixton:geo-loc
+Romeo &amp; Julliet:other
+South Park-:geo-loc
+Breaking Dawn:movie
+Vancouver:geo-loc
+Software Freedom Day:other
+UP Diliman:geo-loc
+Castle:person
+NRSC:other
+Casitas:facility
+Luna Lounge:facility
+muse:facility
+Fearless Tour:other
+Hurricane Earl:other
+Blades:sportsteam
+Travis Toomey:person
+Seattle:geo-loc
+11 Bantam Draft:other
+On My Own Time:other
+Gym Class Heroes:musicartist
+Charlene:person
+Jill:person
+christmas:other
+Jemma:person
+charlene:person
+Metallica:musicartist
+FACEBOOK:company
+simone:person
+CocoFunka:musicartist
+Indiesent Exposure:tvshow
+kilkenny:geo-loc
+Elliot Miner:facility
+Piranha 3D:movie
+lhs:facility
+BlackBerry:product
+BB Bold:product
+Derek:person
+Wrawby:geo-loc
+Ash:person
+KC and The Sunshine Band:musicartist
+#Dallas:geo-loc
+Half baked:movie
+how high:movie
+grandma boys:movie
+puff puff pass:movie
+DT:musicartist
+JPN:geo-loc
+Sour Patch kids:product
+St . Patty 's Day:other
+FB:company
+emily rodriguez:person
+@Cromwell Field:facility
+Not a Genuine Black Man:other
+American Professional Football Association:other
+NFL):other
+Brett Favre:person
+Serie A:other
+Calcio:geo-loc
+ADHD:other
+Paranormal Activity 2:movie
+Christine O'Donnell:person
+anna:person
+Showbiz Tonight:tvshow
+yakuza:other
+Costa do Sauipe:other
+Kanye West:person
+LAMB:product
+Jimmie Johnson:person
+MD:geo-loc
+Float-Ellicott City:geo-loc
+Blakehurst:other
+android:product
+Avast AntiVirus 4 8 PROFIONAL:product
+Avast AntiVirus 4.8 PROFESIONAL:product
+Jets:sportsteam
+Rex Ryan:person
+Delphi:company
+Iron Man 2:movie
+Robert Downey Jr:person
+Mickey Rourke:person
+-Rumi:person
+The Get Up Kids:musicartist
+Sunny Day Real Estate:musicartist
+Cap'n Jazz:musicartist
+MOTOGP:other
+Aragon:geo-loc
+Spain:geo-loc
+Marlboro Ducati:company
+Casey Stoner:person
+Tiger Woods:person
+Lancashire:geo-loc
+Powell:person
+West Indies:geo-loc
+Daren Powell:person
+Hamm:geo-loc
+Hong Kong:geo-loc
+TIFO CREW:other
+Dan Martin:person
+S8 blog:other
+Prophet Muhammad:person
+Allah:person
+Last Sacrifice:other
+SS 2011 Fashion Week:other
+Jason Wu:person
+BB:person
+Peppers:facility
+Kathy:person
+john:person
+Sandman Slim:product
+Richard Kadrey:person
+justin bieber:person
+Caliman:person
+First Baptist:facility
+Harvard:geo-loc
+Jessica Simpson:person
+Simpson:person
+SEDUCTION SATURDAYS:other
+CALABASH LOUNGE:facility
+Orillia:geo-loc
+ON:geo-loc
+Leacock Museum:facility
+Y La Bamba:musicartist
+Portland:geo-loc
+Mississippi Studios:facility
+Disney world:facility
+Disney World:facility
+Nex-Tech:company
+Nex-Tech Wireless:company
+TailGreat:other
+FHSU:sportsteam
+Sabrina:tvshow
+CampaignMonitor:other
+MAiZE:facility
+Dillion High School:facility
+the funny bone:facility
+Miley Cyrus:person
+Paris Hilton:person
+Trophy Club Gwinnett:facility
+Spirit Week:other
+Homecoming Week:other
+Danger Days : True Lives of The Fabulous Killjoys:other
+Super City:company
+Super Angels:company
+Great Pumpkin:other
+Tenshi ni Fureta yo:other
+msn:company
+JC:person
+Adam Beyer:person
+Coolum:geo-loc
+Irvine:geo-loc
+The Ride:movie
+USA:geo-loc
+San Francisco:geo-loc
+Jennifer:person
+Green Day:musicartist
+Joy Huhn:person
+East Nu:other
+Australia:geo-loc
+ATL:geo-loc
+Justin Timberlake:person
+Until the End of Time:other
+Kwiruka:person
+Demos:tvshow
+BCAT:other
+Jerraud Powers:person
+Jacob Lacey:person
+Manning Bowl I:other
+billy:person
+Lancers:sportsteam
+Les Miserables:movie
+Wonder Woman:person
+Hendrix:person
+Electric Lady Studios:company
+Guinness:company
+Sweden:geo-loc
+Treasury:other
+Obama:person
+green day:musicartist
+MJ:person
+AEG:company
+Around The World Twice:product
+DJ STRATEGY:musicartist
+HICKORY:geo-loc
+NC:geo-loc
+Club Penguin:product
+Baveh Nate:person
+COP:other
+the States:geo-loc
+Gelato Gilberto:person
+Burning Bush Grille:facility
+Blount:sportsteam
+Bennett-:person
+Sara B .:person
+Deep Sea Intervention:company
+Singapore:geo-loc
+Jonas Bros:musicartist
+Starstruck:company
+Widener:geo-loc
+Buffalo Municipal Airport:geo-loc
+MN:geo-loc
+Sellotape:product
+Scotland:geo-loc
+JeA Unnie:person
+Fathers Day:other
+Da Bears:sportsteam
+~Wayne Dyer:person
+The Weekend Grind:tvshow
+TWITTER:company
+'Rickey Smiley:person
+UT:sportsteam
+He 's Just A Boy:other
+you tube:company
+The Metro:facility
+Mannie Fresh:person
+Jermaine Dupri:person
+Justice Breyer:person
+Atlas Shrugs:other
+Remington 's Annual Octoberfest:other
+Gnocchi:product
+Italian Sausage:product
+Swiss Chard:product
+Tomatoes:product
+Bio Spot:product
+OH:geo-loc
+Tournament of Champions:other
+Miami 2 Ibiza:other
+GOTTA BODY:other
+JIM JONES:person
+Soho:geo-loc
+Houston:geo-loc
+Fes:person
+Salt Lake:geo-loc
+Fight Club:facility
+Pringles:product
+CCU:other
+Walk at Work Day:other
+running wit mjd:tvshow
+sirius:company
+Boris Kodjoe:person
+AP:other
+Fenway:geo-loc
+jason:person
+Newcastle-Upon-Tyne:geo-loc
+Stakes Day:other
+Figgy Soda:other
+Rose Press:product
+CityTV:other
+buckboardday parade:other
+sanchez:person
+betos:person
+Verona:geo-loc
+Mitchell:person
+Joel:person
+madison:person
+wipro:company
+Santy:person
+Elvis:person
+Salem:geo-loc
+Spoons NW Bistro:facility
+Hyna:person
+Brad paisley:person
+TEACHER'S DAY 2:other
+NEW YORK:geo-loc
+CANWEST Center:facility
+U of W:geo-loc
+CLUB BLU:facility
+dj finese:musicartist
+windows:product
+office:product
+Kick-Ass:movie
+Long Island Mac Arthur Airport:geo-loc
+Summits:facility
+XBOX:product
+Mayan Doomsday:other
+This Is Our Someday:other
+Big Time Rush:musicartist
+Microsoft:company
+Google Music:product
+Techland:company
+Blonde Redhead:musicartist
+A Different Kind Of Ache:other
+Japan:geo-loc
+Flip MinoHD:product
+K ! Tour:other
+Loveless Cafe:facility
+Roy:person
+Greg:person
+International Observe the Moon Night:other
+Halloween:other
+eminem:person
+tucson:geo-loc
+IPad:product
+Lounge22:product
+CORT:company
+KELE:person
+DOES IT OFFEND YOU , YEAH ?:musicartist
+Music Box:facility
+Dim Mak:facility
+SHS:sportsteam
+Indian:geo-loc
+Parking Day:other
+Hudson TMA:other
+Town Square Place:facility
+Pavonia Avenue:geo-loc
+Newport:geo-loc
+MLB:other
+PEI:person
+Sunset Bistro:facility

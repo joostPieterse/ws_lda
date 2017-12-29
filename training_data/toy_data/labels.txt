@@ -1,0 +1,4 @@
+amsterdam:locatie
+de verenigde staten van amerika:locatie
+henk:persoon
+ria:persoon
