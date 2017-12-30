@@ -79,10 +79,11 @@ class Topic_model:
                 num_iterations_inference = 0
                 while not converged_inference and num_iterations_inference < self.max_iter_inference:
                     num_iterations_inference += 1
+                    sum_gamma_d = sum(gamma[d])
                     for n, v in enumerate(self.entity2contexts[d]):
                         for i in range(K):
                             phi[d][n][i] = beta[i][v] * math.exp(
-                                psi(gamma[d][i]) - psi(sum(gamma[d])) + self.lambda_coef / N * y[d][i]
+                                psi(gamma[d][i]) - psi(sum_gamma_d) + self.lambda_coef / N * y[d][i]
                             )
                         # Normalize phi
                         phi[d][n] /= sum(phi[d][n])
@@ -91,10 +92,13 @@ class Topic_model:
             # Update beta
             logging.info("Started updating beta")
             if update_beta:
+                beta = numpy.zeros([K, V])
+                for d in self.entity2contexts.keys():
+                    for n, v in enumerate(self.entity2contexts[d]):
+                        for i in range(K):
+                            # Beta_ij = the sum of all phi_dni for all words w_dn that are equal to word j
+                            beta[i][v] += phi[d][n][i]
                 for i in range(K):
-                    for j in range(V):
-                        # Beta_ij = the sum of all phi_dni for all words w_dn that are equal to word j
-                        beta[i][j] = sum(phi[d][n][i] for d in self.entity2contexts.keys() for n, v in enumerate(self.entity2contexts[d]) if j == v)
                     beta[i] /= sum(beta[i])
             logging.info("Beta updated, start updating alpha")
             # Update alpha using Newton-Rhapson
