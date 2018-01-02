@@ -52,6 +52,11 @@ class Topic_model:
         N = sum(word_count_per_doc.values())
         # Total number of unique words (i.e. vocabulary size)
         V = len({word for words in self.entity2contexts.values() for word in words})
+
+        logging.info("%s classes", K)
+        logging.info("%s entities (=documents)", M)
+        logging.info("%s distinct contexts", V)
+
         # Indicator variable for each (entity, class)
         y = {entity: [0 for i in range(K)] for entity in self.entity2contexts.keys()}
         for entity, labels in self.labeled_entities.items():
@@ -80,6 +85,17 @@ class Topic_model:
                 while not converged_inference and num_iterations_inference < self.max_iter_inference:
                     num_iterations_inference += 1
                     sum_gamma_d = sum(gamma[d])
+                    for i in range(K):
+                        rhs = math.exp(psi(gamma[d][i]) - psi(sum_gamma_d) + self.lambda_coef / N * y[d][i])
+                        for n, v in enumerate(self.entity2contexts[d]):
+                            phi[d][n][i] = beta[i][v] * rhs
+                    # Normalize phi
+                    for n, v in enumerate(self.entity2contexts[d]):
+                        phi[d][n] /= sum(phi[d][n])
+                    for i in range(K):
+                        gamma[d][i] = alpha + sum(phi[d].T[i])
+
+                    """
                     for n, v in enumerate(self.entity2contexts[d]):
                         for i in range(K):
                             phi[d][n][i] = beta[i][v] * math.exp(
@@ -88,6 +104,7 @@ class Topic_model:
                         # Normalize phi
                         phi[d][n] /= sum(phi[d][n])
                     gamma[d] = alpha + sum(phi[d])
+                    """
             # M-step
             # Update beta
             logging.info("Started updating beta")
