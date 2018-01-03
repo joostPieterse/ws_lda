@@ -1,8 +1,6 @@
 import string
 import sys
-import nltk
 from topic_model import Topic_model
-nltk.download('punkt')
 import logging
 import pickle
 
@@ -30,14 +28,6 @@ class WsLda:
 
         logging.basicConfig(level=logging.INFO, stream=sys.stdout, format="%(asctime)s - %(message)s")
 
-    def preprocess_queries(self, queries):
-        translator = str.maketrans('', '', string.punctuation)
-        result = []
-        for query in queries:
-            # Remove puntuation
-            query = query.translate(translator)
-            result.append(' '.join(nltk.word_tokenize(query)))
-        return result
 
     def train(self, max_iter_em=100, max_iter_inference=20, lambda_coef=.1, epsilon_em=1e-4, epsilon_inference=1e-6):
         """
@@ -54,7 +44,7 @@ class WsLda:
         logging.info("Extracting contexts for labeled entities")
         for query in self.queries:
             for entity in self.labeled_entities.keys():
-                if entity in query:
+                if ' '+entity+' ' in ' '+query+' ':
                     context = tuple([s.strip() for s in query.split(entity)])
                     contextID = context2id.get(context, -1)
                     if context not in id2context:
@@ -94,7 +84,7 @@ class WsLda:
             candidates = root.get_contexts(query)
             for prefix, contexts in candidates.items():
                 for context in contexts:
-                    if (context[0] or context[1]) and query.endswith(context[1]):
+                    if (context[0] or context[1]) and query.endswith(' '+context[1]):
                         new_entity = query[len(context[0]):len(query) - len(context[1])].strip()
                         if new_entity not in entity2contexts:
                             if new_entity not in new_entity2contexts:
