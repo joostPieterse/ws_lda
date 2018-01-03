@@ -4,6 +4,7 @@ import nltk
 from topic_model import Topic_model
 nltk.download('punkt')
 import logging
+import pickle
 
 class WsLda:
     """
@@ -65,8 +66,6 @@ class WsLda:
                     else:
                         entity2contexts[entity].append(contextID)
         self.context_set = {id2context[contextID] for entity, contexts in entity2contexts.items() for contextID in contexts}
-
-
         logging.info("Extracted contexts for labeled entities, start training topic model")
         model = Topic_model(self.classes, self.labeled_entities, entity2contexts, context2id, id2context,
                             max_iter_em, max_iter_inference, lambda_coef, epsilon_em, epsilon_inference)
@@ -91,7 +90,7 @@ class WsLda:
         for query in self.queries:
             if queries_rescanned_counter % 50000 == 0:
                 logging.info("%s/%s", queries_rescanned_counter, len(self.queries))
-                queries_rescanned_counter += 1
+            queries_rescanned_counter += 1
             candidates = root.get_contexts(query)
             for prefix, contexts in candidates.items():
                 for context in contexts:
@@ -102,6 +101,16 @@ class WsLda:
                                 new_entity2contexts[new_entity] = [context2id[context]]
                             else:
                                 new_entity2contexts[new_entity].append(context2id[context])
+        with open("indices/aol_data/rescanned_entities.pickle", 'wb') as f1:
+            pickle.dump(new_entity2contexts, f1)
+        with open("backup/indices/aol_data/rescanned_entities.pickle", 'wb') as f2:
+            pickle.dump(new_entity2contexts, f2)
+        with open("indices/aol_data/rescanned_entities.txt", 'w') as plain_f1:
+            plain_f1.write(str(new_entity2contexts))
+        with open("backup/indices/aol_data/rescanned_entities.txt", 'w') as plain_f2:
+            plain_f2.write(str(new_entity2contexts))
+        print(new_entity2contexts)
+
         logging.info("Found " + str(len(new_entity2contexts)) + " new entities, start training topic model for these entities")
         rescan_model = Topic_model(self.classes, {}, new_entity2contexts, context2id, id2context,
                             max_iter_em, max_iter_inference, lambda_coef, epsilon_em, epsilon_inference)

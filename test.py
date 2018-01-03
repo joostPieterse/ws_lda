@@ -1,3 +1,6 @@
+import datetime
+from random import randint
+
 from ws_lda import WsLda
 import pickle
 import pathlib
@@ -10,6 +13,19 @@ def train(input_queries, input_labels, output_dir):
         for line in f:
             labels[line.split(':')[0]] = {c.strip() for c in line.split(':')[1].split(',')}
     classes = [c for c in {c for l in labels.keys() for c in labels[l]}]
+
+    num_test_queries = 5000
+    test_query_indices = {randint(0, len(queries)) for i in range(num_test_queries)}
+    test_queries = {queries[i] for i in test_query_indices}
+    for test_query in sorted(test_query_indices, reverse=True):
+        queries.pop(test_query)
+    current_time = datetime.datetime.today().strftime('%Y%m%d_%H%M%S')
+    with open("test_data/aol_data/queries" + current_time + ".txt", 'w') as test_file:
+        test_file.write("\n".join(test_queries))
+    with open("training_data/aol_data/queries_minus_5000_test.txt", 'w') as test_file:
+        test_file.write("\n".join(queries))
+
+
     model = WsLda(queries, classes, labels)
     model.train()
     pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
@@ -17,12 +33,21 @@ def train(input_queries, input_labels, output_dir):
         pickle.dump(model.class_index, f)
     with open(output_dir + "/named_entity_index.pickle", 'wb') as f:
         pickle.dump(model.named_entity_index, f)
+    with open("backup/" + output_dir + "/class_index.pickle", 'wb') as f:
+        pickle.dump(model.class_index, f)
+    with open("backup/" + output_dir + "/named_entity_index.pickle", 'wb') as f:
+        pickle.dump(model.named_entity_index, f)
     print(model.class_index)
     print(model.named_entity_index)
 
 #train("training_data/toy_data/queries.txt", "training_data/toy_data/labels.txt", "indices/toy_data")
 #train("training_data/twitter_data/all_tweets.txt", "training_data/twitter_data/all_labels.txt", "indices/twitter_data")
 train("training_data/aol_data/queries.txt", "training_data/aol_data/labels.txt", "indices/aol_data")
+
+#with open("indices/aol_data/rescanned_entities.pickle", 'rb') as f:
+#    rescanned_entities = pickle.load(f)
+#    with open("indices/aol_data/rescanned_entities.txt") as plain_f:
+#        plain_f.write(rescanned_entities)
 
 
 def preprocess_aol():
