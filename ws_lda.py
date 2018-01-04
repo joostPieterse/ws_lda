@@ -9,7 +9,7 @@ class WsLda:
     Implementation of WS-LDA, described in "Named Entity Recognition in Query" by Guo et al.
     https://soumen.cse.iitb.ac.in/~soumen/doc/www2013/QirWoo/GuoXCL2009nerq.pdf
     """
-    def __init__(self, queries, classes, labeled_entities):
+    def __init__(self, queries, classes, labeled_entities, class_index=None, named_entity_index=None, context_set=None):
         """
         :param queries: set of queries
         :param classes: set of predefined classes
@@ -20,11 +20,11 @@ class WsLda:
         self.labeled_entities = labeled_entities
 
         # I_C
-        self.class_index = {}
+        self.class_index = class_index or {}
         # I_E
-        self.named_entity_index = {}
+        self.named_entity_index = named_entity_index or {}
         # T
-        self.context_set = set()
+        self.context_set = context_set or set()
 
         logging.basicConfig(level=logging.INFO, stream=sys.stdout, format="%(asctime)s - %(message)s")
 
@@ -147,7 +147,6 @@ class WsLda:
 
     def get_best_entities(self, query):
         best_entities = []
-        query = self.preprocess_queries([query])[0]
         words = query.split()
         for i in range(len(words)):
             for j in range(i, len(words)):
@@ -160,8 +159,10 @@ class WsLda:
         return sorted(best_entities, key=lambda k: k['probability'])
 
     def get_best_entity(self, query):
-        best_entity = self.get_best_entities(query)[0]
-        return best_entity['entity'], best_entity['class'], best_entity['probability']
+        best_entities = self.get_best_entities(query)
+        if len(best_entities) > 0:
+            return best_entities[0]
+        return None
 
 class Node:
     def __init__(self, contexts, prefix=''):

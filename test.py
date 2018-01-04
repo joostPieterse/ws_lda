@@ -67,9 +67,33 @@ def train(input_queries, input_labels, output_dir, rescan_file=None, remove_test
     print(model.class_index)
     print(model.named_entity_index)
 
-#train("training_data/toy_data/queries.txt", "training_data/toy_data/labels.txt", "indices/toy_data")
+def evaluate(index_dir):
+    with open(index_dir + "/class_index.pickle", 'rb') as f:
+        class_index = pickle.load(f)
+    with open(index_dir + "/named_entity_index.pickle", 'rb') as f:
+        named_entity_index = pickle.load(f)
+    with open("training_data/aol_data/queries_minus_5000_test20180104_1546.txt") as f:
+        queries = [q.strip() for q in f.readlines() if len(q) < 100]
+    with open("training_data/aol_data/labels.txt") as f:
+        labels = {}
+        for line in f:
+            labels[line.split(':')[0]] = {c.strip() for c in line.split(':')[1].split(',')}
+    classes = [c for c in {c for l in labels.keys() for c in labels[l]}]
+    context_set = {context for (context, topic) in class_index}
+    model = WsLda(queries, classes, labels, class_index, named_entity_index, context_set)
+    current_time = datetime.datetime.today().strftime('%Y%m%d_%H%M')
+    with open("test_data/aol_data/queries20180104_1546.txt") as test_queries:
+        with open("result_data/aol_data/result" + current_time + ".txt", 'w') as result:
+            for query in test_queries:
+                best_entity = model.get_best_entity(query)
+                if best_entity is not None:
+                    query = query.replace(best_entity['entity'], "<%s> %s </%s>" % (best_entity['class'], best_entity['entity'], best_entity['class']))
+                result.write(query)
+
+#evaluate("indices/aol_data")
+train("training_data/toy_data/queries.txt", "training_data/toy_data/labels.txt", "indices/toy_data")
 #train("training_data/twitter_data/all_tweets.txt", "training_data/twitter_data/all_labels.txt", "indices/twitter_data")
-train("training_data/aol_data/queries.txt", "training_data/aol_data/labels.txt", "indices/aol_data", None, True)
+#train("training_data/aol_data/queries.txt", "training_data/aol_data/labels.txt", "indices/aol_data", None, True)
 
 
 

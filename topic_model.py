@@ -47,10 +47,8 @@ class Topic_model:
         K = len(self.classes)
         # Number of documents
         M = len(self.entity2contexts.keys())
-        # Nd
-        word_count_per_doc = {entity: len(contexts) for entity, contexts in self.entity2contexts.items()}
-        max_Nd = max(word_count_per_doc.values())
         # Total number of words
+        word_count_per_doc = {entity: len(contexts) for entity, contexts in self.entity2contexts.items()}
         N = sum(word_count_per_doc.values())
         # Total number of unique words (i.e. vocabulary size)
         V = len({word for words in self.entity2contexts.values() for word in words})
@@ -125,7 +123,6 @@ class Topic_model:
             alpha_tolerance = 10 ** -2.0
             for it in range(nr_max_iters):
                 alpha_old = alpha
-
                 log_alpha = math.log(alpha)
                 dL = M * (K * digamma(K * alpha) - K * digamma(alpha) + sum(
                     psi(gamma[d][i] - psi(sum(gamma[d][j] for j in range(K)))) for d in self.entity2contexts.keys()))
@@ -135,7 +132,8 @@ class Topic_model:
                 except OverflowError:
                     # Don't update I guess
                     pass
-                alpha = max(alpha, 1e-50)
+                if alpha == 0 or math.isnan(alpha):
+                    alpha = 50 / K
 
                 #  Check convergence
                 if abs(alpha - alpha_old) < alpha_tolerance:
