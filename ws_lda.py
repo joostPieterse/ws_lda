@@ -29,8 +29,9 @@ class WsLda:
         logging.basicConfig(level=logging.INFO, stream=sys.stdout, format="%(asctime)s - %(message)s")
 
 
-    def train(self, max_iter_em=100, max_iter_inference=20, lambda_coef=.1, epsilon_em=1e-4, epsilon_inference=1e-6):
+    def train(self, new_entity2contexts=None, max_iter_em=100, max_iter_inference=20, lambda_coef=.1, epsilon_em=1e-4, epsilon_inference=1e-6):
         """
+        :param new_entity2contexts rescan of query log after obtaining contexts
         :param max_iter_em: maximum number of iterations of the EM algorithm
         :param max_iter_inference: maximum number of iterations done in the inference in the E-step
         :param lambda_coef: Lambda coefficient. When set to 0 WS-LDA is the same as LDA
@@ -56,7 +57,50 @@ class WsLda:
                     else:
                         entity2contexts[entity].append(contextID)
         self.context_set = {id2context[contextID] for entity, contexts in entity2contexts.items() for contextID in contexts}
-        logging.info("Extracted contexts for labeled entities, start training topic model")
+
+        if new_entity2contexts is None:
+            logging.info("Extracted contexts, start rescanning the query log for acquired contexts")
+            # Find new entities in the search query log using the contexts we found
+            root = Node(self.context_set)
+            new_entity2contexts = {}
+            queries_rescanned_counter = 0
+            for query in self.queries:
+                if queries_rescanned_counter % 50000 == 0:
+                    logging.info("%s/%s", queries_rescanned_counter, len(self.queries))
+                queries_rescanned_counter += 1
+                candidates = root.get_contexts(query)
+                for prefix, contexts in candidates.items():
+                    for context in contexts:
+                        if (context[0] or context[1]) and (not context[1] or query.endswith(' ' + context[1])) and (
+                                    not context[0] or query.startswith(context[0] + ' ')):
+                            new_entity = query[len(context[0]):len(query) - len(context[1])].strip()
+                            if new_entity not in entity2contexts:
+                                if new_entity not in new_entity2contexts:
+                                    new_entity2contexts[new_entity] = [context2id[context]]
+                                else:
+                                    new_entity2contexts[new_entity].append(context2id[context])
+            if len(self.queries) > 10000:
+                with open("indices/aol_data/rescanned_entities.pickle", 'wb') as f1:
+                    pickle.dump(new_entity2contexts, f1)
+                with open("backup/indices/aol_data/rescanned_entities.pickle", 'wb') as f2:
+                    pickle.dump(new_entity2contexts, f2)
+                with open("indices/aol_data/rescanned_entities.txt", 'w') as plain_f1:
+                    plain_f1.write(str(new_entity2contexts))
+                with open("backup/indices/aol_data/rescanned_entities.txt", 'w') as plain_f2:
+                    plain_f2.write(str(new_entity2contexts))
+                with open("indices/aol_data/context2id.txt", 'w') as plain_f3:
+                    plain_f3.write(str(context2id))
+                print(new_entity2contexts)
+
+        context2count = {}
+        for entity, contexts in entity2contexts.items():
+            for context in contexts:
+                if context in context2count:
+                    context2count[context] += contexts.count(context)
+                else:
+                    context2count[context] = contexts.count(context)
+
+        logging.info("Rescanned query log, start training topic model")
         model = Topic_model(self.classes, self.labeled_entities, entity2contexts, context2id, id2context,
                             max_iter_em, max_iter_inference, lambda_coef, epsilon_em, epsilon_inference)
         beta, phi = model.train()
@@ -72,40 +116,13 @@ class WsLda:
         for entity in phi:
             for classID, class_probabilities in enumerate(phi[entity].T):
                 self.named_entity_index[(self.classes[classID], entity)] = sum(class_probabilities) / len(class_probabilities)
-        logging.info("Indices updated, start rescanning the query log for acquired contexts")
-        # Find new entities in the search query log using the contexts we found
-        root = Node(self.context_set)
-        new_entity2contexts = {}
-        queries_rescanned_counter = 0
-        for query in self.queries:
-            if queries_rescanned_counter % 50000 == 0:
-                logging.info("%s/%s", queries_rescanned_counter, len(self.queries))
-            queries_rescanned_counter += 1
-            candidates = root.get_contexts(query)
-            for prefix, contexts in candidates.items():
-                for context in contexts:
-                    if (context[0] or context[1]) and query.endswith(' '+context[1]):
-                        new_entity = query[len(context[0]):len(query) - len(context[1])].strip()
-                        if new_entity not in entity2contexts:
-                            if new_entity not in new_entity2contexts:
-                                new_entity2contexts[new_entity] = [context2id[context]]
-                            else:
-                                new_entity2contexts[new_entity].append(context2id[context])
-        with open("indices/aol_data/rescanned_entities.pickle", 'wb') as f1:
-            pickle.dump(new_entity2contexts, f1)
-        with open("backup/indices/aol_data/rescanned_entities.pickle", 'wb') as f2:
-            pickle.dump(new_entity2contexts, f2)
-        with open("indices/aol_data/rescanned_entities.txt", 'w') as plain_f1:
-            plain_f1.write(str(new_entity2contexts))
-        with open("backup/indices/aol_data/rescanned_entities.txt", 'w') as plain_f2:
-            plain_f2.write(str(new_entity2contexts))
-        print(new_entity2contexts)
 
-        logging.info("Found " + str(len(new_entity2contexts)) + " new entities, start training topic model for these entities")
+        logging.info("Start training topic model for new entities")
+        new_entity2contexts = {entity: contexts for entity, contexts in new_entity2contexts.items() if len([context for context in contexts if context2count.get(context, 0) > 15]) > 2}
         rescan_model = Topic_model(self.classes, {}, new_entity2contexts, context2id, id2context,
                             max_iter_em, max_iter_inference, lambda_coef, epsilon_em, epsilon_inference)
         rescan_beta, rescan_phi = rescan_model.train(beta)
-        logging.info("Rescand topic model trained, start updating indices")
+        logging.info("Rescanned topic model trained, start updating indices")
         # Update the named entity index with new entities with probabilities P(entity)
         for entity, contexts in new_entity2contexts.items():
             self.named_entity_index[entity] = len(contexts) / len(self.queries)
@@ -114,8 +131,6 @@ class WsLda:
             for classID, class_probabilities in enumerate(rescan_phi[entity].T):
                 self.named_entity_index[(self.classes[classID], entity)] = sum(class_probabilities) / len(class_probabilities)
         logging.info("Indices updated")
-
-
 
     def _get_entity(self, query, context):
         """

@@ -21,11 +21,12 @@ def preprocess_queries(queries):
     for query in queries:
         # Remove puntuation
         query = query.translate(translator)
-        result.append(' '.join(nltk.word_tokenize(query)))
+        result.append(query)
     return result
 
 
-def train(input_queries, input_labels, output_dir, remove_test_data=False):
+def train(input_queries, input_labels, output_dir, rescan_file=None, remove_test_data=False):
+    logging.info("Reading input query and input label files")
     with open(input_queries) as f:
         queries = [q.strip() for q in f.readlines() if len(q) < 100]
     with open(input_labels) as f:
@@ -33,22 +34,27 @@ def train(input_queries, input_labels, output_dir, remove_test_data=False):
         for line in f:
             labels[line.split(':')[0]] = {c.strip() for c in line.split(':')[1].split(',')}
     classes = [c for c in {c for l in labels.keys() for c in labels[l]}]
-
+    new_entity2contexts = None
+    if rescan_file is not None:
+        with open(rescan_file, 'rb') as f:
+            new_entity2contexts = pickle.load(f)
+    logging.info("Files read, start removing test queries from training data")
     if remove_test_data:
         num_test_queries = 5000
         test_query_indices = {randint(0, len(queries)) for i in range(num_test_queries)}
         test_queries = {queries[i] for i in test_query_indices}
         for test_query in sorted(test_query_indices, reverse=True):
             queries.pop(test_query)
-        current_time = datetime.datetime.today().strftime('%Y%m%d_%H%M%S')
+        current_time = datetime.datetime.today().strftime('%Y%m%d_%H%M')
         with open("test_data/aol_data/queries" + current_time + ".txt", 'w') as test_file:
             test_file.write("\n".join(test_queries))
-        with open("training_data/aol_data/queries_minus_5000_test.txt", 'w') as test_file:
+        with open("training_data/aol_data/queries_minus_5000_test" + current_time + ".txt", 'w') as test_file:
             test_file.write("\n".join(queries))
+    logging.info("test queries removed, start preprocessing queries")
     queries = preprocess_queries(queries)
-    print(queries)
+    logging.info("Queries preprocessed, start WS-LDA")
     model = WsLda(queries, classes, labels)
-    model.train()
+    model.train(new_entity2contexts=new_entity2contexts)
     pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
     with open(output_dir + "/class_index.pickle", 'wb') as f:
         pickle.dump(model.class_index, f)
@@ -61,15 +67,16 @@ def train(input_queries, input_labels, output_dir, remove_test_data=False):
     print(model.class_index)
     print(model.named_entity_index)
 
-train("training_data/toy_data/queries.txt", "training_data/toy_data/labels.txt", "indices/toy_data")
+#train("training_data/toy_data/queries.txt", "training_data/toy_data/labels.txt", "indices/toy_data")
 #train("training_data/twitter_data/all_tweets.txt", "training_data/twitter_data/all_labels.txt", "indices/twitter_data")
-#train("training_data/aol_data/queries.txt", "training_data/aol_data/labels.txt", "indices/aol_data", True)
+train("training_data/aol_data/queries.txt", "training_data/aol_data/labels.txt", "indices/aol_data", None, True)
+
+
 
 #with open("indices/aol_data/rescanned_entities.pickle", 'rb') as f:
 #    rescanned_entities = pickle.load(f)
 #    with open("indices/aol_data/rescanned_entities.txt") as plain_f:
 #        plain_f.write(rescanned_entities)
-
 
 
 def preprocess_aol():
