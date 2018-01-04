@@ -2,6 +2,8 @@ import math
 import numpy
 import logging
 import sys
+
+from numpy.core.umath import square
 from scipy.special import psi, digamma, polygamma
 
 
@@ -119,14 +121,25 @@ class Topic_model:
                     beta[i] /= sum(beta[i])
             logging.info("Beta updated, start updating alpha")
             # Update alpha using Newton-Rhapson
-            log_alpha = math.log(alpha)
-            dL = M * (K * digamma(K * alpha) - K * digamma(alpha) + sum(psi(gamma[d][i] - psi(sum(gamma[d][j] for j in range(K)))) for d in self.entity2contexts.keys()))
-            ddL = M * (K ** 2 * polygamma(1, K * alpha) - K * polygamma(1, alpha))
-            try:
-                alpha = math.exp(log_alpha - dL / (ddL * alpha + dL))
-            except OverflowError:
-                # Don't update I guess
-                pass
-            alpha = max(alpha, 1e-50)
+            nr_max_iters = 1000
+            alpha_tolerance = 10 ** -2.0
+            for it in range(nr_max_iters):
+                alpha_old = alpha
+
+                log_alpha = math.log(alpha)
+                dL = M * (K * digamma(K * alpha) - K * digamma(alpha) + sum(
+                    psi(gamma[d][i] - psi(sum(gamma[d][j] for j in range(K)))) for d in self.entity2contexts.keys()))
+                ddL = M * (K ** 2 * polygamma(1, K * alpha) - K * polygamma(1, alpha))
+                try:
+                    alpha = math.exp(log_alpha - dL / (ddL * alpha + dL))
+                except OverflowError:
+                    # Don't update I guess
+                    pass
+                alpha = max(alpha, 1e-50)
+
+                #  Check convergence
+                if abs(alpha - alpha_old) < alpha_tolerance:
+                    break
+
             num_iterations_em += 1
         return beta, phi
