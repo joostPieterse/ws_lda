@@ -156,7 +156,8 @@ class WsLda:
                     for c in self.classes:
                         probability = self.named_entity_index[entity] * self.named_entity_index[(c, entity)] * self.class_index[(context, c)]
                         best_entities.append({"entity": entity, "class": c, "probability": probability})
-        return sorted(best_entities, key=lambda k: k['probability'])
+        best_entities.sort(key=lambda k: k['probability'], reverse=True)
+        return best_entities
 
     def get_best_entity(self, query):
         best_entities = self.get_best_entities(query)
@@ -188,3 +189,5 @@ class Node:
         if child is not None:
             result.update(child.get_contexts(query[1:]))
         return result
+
+
